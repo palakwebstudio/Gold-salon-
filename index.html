@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LuxeLooks Salon - Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#000;color:#fff}
+
+/* HEADER */
+header{background:#000;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222;position:sticky;top:0;z-index:1000}
+.logo{font-size:22px;font-weight:600;letter-spacing:2px}
+.menu-icon{font-size:22px;cursor:pointer}
+
+/* SIDE MENU */
+.side-menu{position:fixed;top:0;right:-100%;width:70%;height:100%;background:#000;padding:20px;transition:0.4s;z-index:999}
+.side-menu.active{right:0}
+.side-menu div{padding:15px 0;border-bottom:1px solid #333}
+
+/* HERO */
+.hero{position:relative;height:350px;background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero::after{content:'';position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.65)}
+.hero-content{position:relative;animation:fadeIn 1.5s}
+.hero h1{color:#c9a34e;font-size:30px;margin-bottom:10px}
+.hero p{line-height:1.8}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* BUTTONS */
+.top-btns{display:flex;gap:10px;margin-top:10px;justify-content:center}
+.top-btns a{border:1px solid #c9a34e;color:#c9a34e;padding:8px 12px;text-decoration:none;font-size:12px}
+
+/* FORM */
+.form-section{background:#f5f5f5;color:#000;padding:25px}
+.form-section h2{text-align:center;margin-bottom:15px}
+.form-group{margin-bottom:12px}
+.form-group input,.form-group select{width:100%;padding:10px;border:none;border-bottom:1px solid #000;background:none}
+.btn-main{background:#c9a34e;color:#fff;border:none;width:100%;padding:12px;margin-top:10px;font-weight:600;cursor:pointer}
+.btn-main:hover{opacity:0.9}
+
+/* BRANDS */
+.brands{display:grid;grid-template-columns:1fr 1fr}
+.brands div{background:#fff;color:#000;text-align:center;padding:20px;border:1px solid #ddd}
+
+/* WHATSAPP FLOAT */
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:12px 15px;border-radius:50%;font-size:20px;text-decoration:none}
+
+/* FOOTER */
+footer{text-align:center;padding:20px;background:#000}
+.call{color:#c9a34e}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">LUXELOOKS</div>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<div class="side-menu" id="menu">
+<div>HOME</div>
+<div>ABOUT US</div>
+<div>SERVICES</div>
+<div>E-SHOP</div>
+<div>FRANCHISE</div>
+<div>ACADEMY</div>
+<div>CONTACT</div>
+<div>OFFERS</div>
+</div>
+
+<section class="hero">
+<div class="hero-content">
+<h1>NOW OPEN AT</h1>
+<p>MUMBAI<br>DELHI<br>NOIDA<br>MOHALI</p>
+<div class="top-btns">
+<a href="#">Book Appointment</a>
+<a href="#">Salon Finder</a>
+</div>
+</div>
+</section>
+
+<section class="form-section">
+<h2>Book An Appointment</h2>
+<div class="form-group"><input type="text" placeholder="Name*"></div>
+<div class="form-group"><input type="text" placeholder="Contact*"></div>
+<div class="form-group"><input type="email" placeholder="Email"></div>
+<div class="form-group"><select><option>City*</option></select></div>
+<div class="form-group"><select><option>Location*</option></select></div>
+<div class="form-group"><select><option>Gender*</option></select></div>
+<div class="form-group"><input type="text" placeholder="Service Type"></div>
+<div class="form-group"><input type="date"></div>
+<div class="form-group"><input type="time"></div>
+<button class="btn-main">Book Appointment</button>
+</section>
+
+<section class="brands">
+<div>L'OREAL</div>
+<div>KERASTASE</div>
+<div>OLAPLEX</div>
+<div>MOROCCANOIL</div>
+<div>GK HAIR</div>
+<div>DERMALOGICA</div>
+<div>SWATI</div>
+<div>RENE FURTERER</div>
+<div>BRASIL CACAU</div>
+<div>BALMAIN</div>
+<div>BIOTOP</div>
+<div>WAHL</div>
+</section>
+
+<footer>
+<p>OR</p>
+<p class="call">Call us @ 1800 000 0000</p>
+</footer>
+
+<a href="https://wa.me/919999999999" class="whatsapp">💬</a>
+
+<script>
+function toggleMenu(){
+const menu=document.getElementById('menu');
+menu.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
